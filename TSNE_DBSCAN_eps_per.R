@@ -105,8 +105,8 @@ ggplot(df, aes(x = idx, y = dist)) +
 
 
 
-#different perplexity visulization------------------------------------------------------------
-perplexity_values <- c(5, 10, 20, 30, 50)   # 数值顺序
+#different perplexity visualization ------------------------------------------------------------
+perplexity_values <- c(5, 10, 20, 30, 50) 
 tsne_list <- list()
 original_clusters <- tsne_out_data$cl_dbscan
 cluster_factor <- factor(original_clusters, levels = sort(unique(original_clusters)))
