@@ -81,7 +81,7 @@ ggplot(tsne_out_data, aes(x = V1, y = V2, colour = cl_dbscan)) +
   xlab("TSNE-1") + ylab("TSNE-2")
 
 
-#elbow method to identify optimal eps-------------------------
+#elbow method for optimal eps selection-------------------------
 embeded <- as.matrix(tsne_results$Y)
 dim <- ncol(embeded)  
 k <- 2 * dim                 
@@ -105,7 +105,7 @@ ggplot(df, aes(x = idx, y = dist)) +
 
 
 
-#different perplexity visualization ------------------------------------------------------------
+#t-SNE visualization across different perplexity values ------------------------------------------------------------
 perplexity_values <- c(5, 10, 20, 30, 50) 
 tsne_list <- list()
 original_clusters <- tsne_out_data$cl_dbscan
